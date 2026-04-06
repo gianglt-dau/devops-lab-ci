@@ -1,4 +1,4 @@
-const { add, subtract, multiply, divide, modulo } = require('../src/calculator');
+import { add, subtract, multiply, divide, modulo } from '../src/calculator.js';
 
 describe('Calculator', () => {
   describe('add()', () => {
