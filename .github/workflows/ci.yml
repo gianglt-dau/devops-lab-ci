@@ -21,8 +21,6 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        # Use `npm install` here to avoid failing when lockfile and package.json
-        # are out of sync in demo branches. For strict clean installs use `npm ci`.
         run: npm install
 
       - name: Run tests
