@@ -1,4 +1,4 @@
-import { add, subtract, multiply, divide, modulo } from '../src/calculator.js';
+import { add, subtract, multiply, divide, addWrong } from '../src/calculator.js';
 
 describe('Calculator', () => {
   describe('add()', () => {
@@ -36,5 +36,21 @@ describe('Calculator', () => {
       expect(() => divide(5, 0)).toThrow('Cannot divide by zero');
     });
   });
+
+
+  describe('addWrong()', () => {
+    test('Cộng hai số dương', () => {
+      expect(addWrong(2, 3)).toBe(6);
+    });
+
+    test('Cộng một số âm', () => {
+      expect(addWrong(-1, 5)).toBe(5);
+    });
+
+    test('Cộng với số không', () => {
+      expect(addWrong(0, 7)).toBe(8);
+    });
+  });
+
 
 });

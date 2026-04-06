@@ -1,5 +1,5 @@
 export function add(a, b) {
-  return a + b;
+  return a + b +1;
 }
 
 export function subtract(a, b) {
@@ -16,4 +16,8 @@ export function divide(a, b) {
     throw new Error('Cannot divide by zero');
   }
   return a / b;
+}
+
+export function addWrong(a, b) {
+  return a + b +1;
 }
