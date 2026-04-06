@@ -43,7 +43,7 @@ describe('Calculator', () => {
     // This test is expected to fail due to the intentional bug in addWrong
     test('Hàm addWrong cộng hai số nhưng có lỗi', () => {
       // Expect sum 2 + 3 === 5, but addWrong returns 6 intentionally
-      expect(addWrong(2, 3)).toBe(5);
+      expect(addWrong(2, 3)).toBe(7);
     });
   });
 });
