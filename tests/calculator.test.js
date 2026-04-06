@@ -1,4 +1,4 @@
-const { add, subtract, multiply, divide } = require('../src/calculator');
+import { add, subtract, multiply, divide, modulo } from '../src/calculator.js';
 
 describe('Calculator', () => {
   describe('add()', () => {
@@ -34,6 +34,16 @@ describe('Calculator', () => {
 
     test('Ném lỗi khi chia cho số không', () => {
       expect(() => divide(5, 0)).toThrow('Cannot divide by zero');
+    });
+  });
+
+  describe('modulo()', () => {
+    test('Lấy phần dư của hai số', () => {
+      expect(modulo(10, 3)).toBe(1);
+    });
+
+    test('Ném lỗi khi chia lấy dư cho 0', () => {
+      expect(() => modulo(5, 0)).toThrow('Cannot modulo by zero');
     });
   });
 });
