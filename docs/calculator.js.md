@@ -16,7 +16,3 @@ export function divide(a, b) {
   }
   return a / b;
 }
-
-export function addWrong(a, b) {
-  return a + b + 10;
-}

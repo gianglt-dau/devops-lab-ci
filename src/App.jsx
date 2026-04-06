@@ -1,10 +1,10 @@
 import './App.css';
-import calc from './calculator';
+import {addWrong} from './calculator';
 
 function App() {
   const a = 2;
   const b = 3;
-  const wrong = calc.addWrong(a, b);
+  const wrong = addWrong(a, b);
 
   return (
     <div style={{ padding: 32 }}>
