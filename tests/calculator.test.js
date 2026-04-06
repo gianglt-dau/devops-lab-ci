@@ -42,7 +42,7 @@ describe('Calculator', () => {
   describe('addWrong() - intentionally buggy', () => {
     test('Hàm addWrong cộng hai số nhưng có lỗi', () => {
       // Expect sum 2 + 3 === 5, but addWrong returns 6 intentionally
-      expect(addWrong(2, 3)).toBe(6);
+      expect(addWrong(2, 3)).toBe(5);
     });
   });
 });
