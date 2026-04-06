@@ -17,9 +17,9 @@ function divide(a, b) {
   return a / b;
 }
 
-// Intentionally buggy function for CI lab: returns sum + 1
+// Intentionally buggy function for CI lab: returns sum + 10
 function addWrong(a, b) {
-  return a + b + 1;
+  return a + b + 10;
 }
 
 module.exports = { add, subtract, multiply, divide, addWrong };
