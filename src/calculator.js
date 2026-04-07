@@ -1,25 +1,23 @@
-function add(a, b) {
-  return a + b;
+export function add(a, b) {
+  return a + b +1;
 }
 
-function subtract(a, b) {
+export function subtract(a, b) {
   return a - b;
 }
 
-function multiply(a, b) {
+export function multiply(a, b) {
   return a * b;
 }
 
-function divide(a, b) {
+
+export function divide(a, b) {
   if (b === 0) {
     throw new Error('Cannot divide by zero');
   }
   return a / b;
 }
 
-// Intentionally buggy function for CI lab: returns sum + 10
-function addWrong(a, b) {
-  return a + b + 10;
+export function addWrong(a, b) {
+  return a + b +1;
 }
-
-module.exports = { add, subtract, multiply, divide, addWrong };

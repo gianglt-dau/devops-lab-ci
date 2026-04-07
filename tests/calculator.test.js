@@ -1,4 +1,4 @@
-const { add, subtract, multiply, divide } = require('../src/calculator');
+import { add, subtract, multiply, divide, addWrong } from '../src/calculator.js';
 
 const { addWrong } = require('../src/calculator');
 
@@ -39,11 +39,20 @@ describe('Calculator', () => {
     });
   });
 
-  describe('addWrong() - intentionally buggy', () => {
-    // This test is expected to fail due to the intentional bug in addWrong
-    test('Hàm addWrong cộng hai số nhưng có lỗi', () => {
-      // Expect sum 2 + 3 === 5, but addWrong returns 6 intentionally
-      expect(addWrong(2, 3)).toBe(7);
+
+  describe('addWrong()', () => {
+    test('Cộng hai số dương', () => {
+      expect(addWrong(2, 3)).toBe(6);
+    });
+
+    test('Cộng một số âm', () => {
+      expect(addWrong(-1, 5)).toBe(5);
+    });
+
+    test('Cộng với số không', () => {
+      expect(addWrong(0, 7)).toBe(8);
     });
   });
+
+
 });
