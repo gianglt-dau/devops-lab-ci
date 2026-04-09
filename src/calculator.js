@@ -17,7 +17,7 @@ export function divide(a, b) {
   }
   return a / b;
 }
-
+//Bổ sung hàm modulo để tính phần dư của phép chia
 export function modulo(a, b) {
   if (b === 0) {
     throw new Error('Cannot modulo by zero');
@@ -25,4 +25,7 @@ export function modulo(a, b) {
   return a % b;
 }
 
+export function power(a, b) {
+  return Math.pow(a, b);
+}
 
