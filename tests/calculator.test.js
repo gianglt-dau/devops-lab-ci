@@ -1,4 +1,4 @@
-import { add, subtract, multiply, divide,modulo } from '../src/calculator.js';
+import { add, subtract, multiply, divide, modulo, power } from '../src/calculator.js';
 
 describe('Calculator', () => {
   describe('add()', () => {
@@ -37,7 +37,7 @@ describe('Calculator', () => {
     });
   });
 
-    describe('modulo()', () => {
+  describe('modulo()', () => {
     test('Lấy phần dư của hai số', () => {
       expect(modulo(10, 3)).toBe(1);
     });
@@ -46,4 +46,11 @@ describe('Calculator', () => {
       expect(() => modulo(5, 0)).toThrow('Cannot modulo by zero');
     });
   });
+  describe('power()', () => {
+    test('Tính lũy thừa 2 số', () => {
+      expect(power(2, 3)).toBe(8);
+    });
+
+  });
+
 });
