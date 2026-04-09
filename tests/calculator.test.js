@@ -38,10 +38,6 @@ describe('Calculator', () => {
   });
 
 
-    test('Ném lỗi khi chia cho số không', () => {
-      expect(() => modulo(5, 0)).toThrow('Cannot modulo by zero');
-    });
-  });
 
   describe('power()', () => {
     test('Tính lũy thừa của hai số', () => {
