@@ -6,8 +6,11 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
   globalIgnores(['dist']),
+
+  // 🔹 Code
   {
     files: ['**/*.{js,jsx}'],
+    ignores: ['tests/**'], 
     extends: [
       js.configs.recommended,
       reactHooks.configs.flat.recommended,
@@ -24,6 +27,14 @@ export default defineConfig([
     },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+    },
+  },
+
+  // Config riêng cho test
+  {
+    files: ['tests/**/*.js'],
+    languageOptions: {
+      globals: globals.jest,
     },
   },
 ])
