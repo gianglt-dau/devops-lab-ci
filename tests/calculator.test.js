@@ -48,7 +48,7 @@ describe('Calculator', () => {
   });
 
   describe('power()', () => {
-    test('Tinh luy thua cua hai so', () => {
+    test('Kiểm tra tính lũy thừa của hai số', () => {
       expect(power(2, 3)).toBe(8);
     });
   });
