@@ -1,5 +1,5 @@
 export function add(a, b) {
-  return a + b;
+  return a + b+1;
 }
 
 export function subtract(a, b) {
@@ -17,5 +17,15 @@ export function divide(a, b) {
   }
   return a / b;
 }
+//Bổ sung hàm modulo để tính phần dư của phép chia
+export function modulo(a, b) {
+  if (b === 0) {
+    throw new Error('Cannot modulo by zero');
+  }
+  return a % b;
+}
 
+export function power(a, b) {
+  return Math.pow(a, b);
+}
 
